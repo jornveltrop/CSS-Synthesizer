@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+button:nth-child(1) {
+    padding: 2em;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+button:nth-child(2) {
+    padding: 2em;
+    position: absolute;
+    top: 5em;
+    left: 0;
+}
+
+button:nth-child(3) {
+    padding: 2em;
+    position: absolute;
+    top: 10em;
+    left: 0;
+}
+
+
+#wave-container {
+    background: rgb(209, 209, 209);
+	height: 10em;
+	width: 30em;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    margin-left: 20em;
+}
+
+.dot {
+	transform-origin: 50% 50%;
+	height: 6px;
+	width: 6px;
+	border-radius: 50%;
+	background-color: #c0392b;
+	animation: vertical-movement 2.5s infinite ease-in-out;
+    transition: all 1s ease;
+}
+
+#d1 {
+	animation-delay: -0.3s;
+}
+
+#d2 {
+	animation-delay: -0.6s;
+}
+
+#d3 {
+	animation-delay: -0.9s;
+}
+
+#d4 {
+	animation-delay: -1.2s;
+}
+
+#d5 {
+	animation-delay: -1.5s;
+}
+
+#d6 {
+	animation-delay: -1.8s;
+}
+
+#d7 {
+	animation-delay: -2.1s;
+}
+
+#d8 {
+	animation-delay: -2.4s;
+}
+
+#d9 {
+	animation-delay: -2.7s;
+}
+
+#d10 {
+	animation-delay: -3s;
+}
+
+@keyframes vertical-movement {
+	0%,
+	100% {
+		transform: translateY(0%);
+	}
+	50% {
+		transform: translateY(30px);
+	}
+}
+
+
+button:nth-child(1):active ~ .dot {
+    background-color: blue;
+}
+
+button:nth-child(2):active ~ .dot {
+    height: 15px;
+    width: 15px;
+}
+
+button:nth-child(3):active ~ .dot {
+    animation-duration: 1.5s;
+}
