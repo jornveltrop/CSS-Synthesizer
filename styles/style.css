@@ -7,3 +7,72 @@ html, body {
     height: 100%;
     width: 100%;
 }
+
+article {
+    display: block;
+    position: absolute;
+    top: 120px;
+    top: calc(50vh - 300px);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 790px;
+    height: 610px;
+    border-radius: 6px;
+    background-color: #734121;
+    background-image: linear-gradient( 135deg, #85582f, #a5784e, #bb8e64 );
+    box-shadow: 
+    /* BORDER SHADOW LEFT */
+        2px 0 1.5px -1.5px #41291a inset, 
+        3.5px 0 2.5px -2.5px #5c3e23 inset, 
+        4.5px 0 2.5px -2.5px #5f4125 inset, 
+        5.5px 0 2.5px -2.5px #6d4a29 inset, 
+        6.5px 0 2.5px -2.5px #85582f inset,
+    /* BORDER SHADOW RIGHT */
+        -3px 0 2px -2px #f9f1e5 inset, 
+        -3.5px 0 2px -2px #fff9ed inset, 
+        -4.5px 0 2px -2px #fdebd4 inset, 
+        -5.5px 0 2px -2px #fef0db inset,
+    
+    /* BORDER SHADOW TOP */
+        0 2px 2px -2px #ebdbcd inset, 
+        0 4px 2px -2px #eec8c7 inset, 
+        0 5px 2px -2px #f4cfc7 inset,
+    /* BORDER SHADOW BOTTOM */
+        0 -2px 1.5px -1.5px #e8d4dd inset, 
+        0 -4.5px 1.5px -1.5px #f4e2c7 inset, 
+        0 -5px 1.5px -1.5px #fffdfb inset 
+   
+    /*
+        -30px -30px 10px rgb(114 86 98 / 5%), 
+        -25px -25px 10px rgb(114 86 98 / 10%),
+         -20px -20px 10px rgb(114 86 98 / 8%), 
+         -10px -10px 10px rgb(114 86 98 / 10%), 
+         -5px -5px 10px rgb(114 86 98 / 13%), 
+         -50px -90px 30px rgb(114 86 98 / 15%), 
+         -45px -80px 30px rgb(114 86 98 / 13%), 
+         -40px -70px 30px rgb(114 86 98 / 10%), 
+         -35px -60px 30px rgb(114 86 98 / 8%), 
+         -45px -50px 30px rgb(114 86 98 / 5%), 
+         -2px 0 5px rgb(137 124 142 / 50%), 
+         0 0 10px rgb(137 124 142 / 10%), 
+         0 0 20px rgb(137 124 142 / 5%), 
+         0 0 50px rgb(255 245 250 / 50%)
+         */
+         ; 
+}
+
+
+article img {
+    mix-blend-mode:multiply;
+    opacity: .5;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+}
+
+section {
+    margin: 3em;
+    background-color: red;
+    height: 100%;
+}
