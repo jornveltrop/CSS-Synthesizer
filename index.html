@@ -11,6 +11,7 @@
 </head>
 <body>
     <main>
+        <input type="text" onkeyup="this.setAttribute('value', this.value);" value="" id="keys" autocorrect="off" />
         <article>
             <img src="img/woodTexture.jpeg">
             <section>
@@ -21,11 +22,11 @@
                         <label for="...">...</label>
                     </fieldset>
 
-                    <input type="radio" name="size" id="size1" checked>
-                    <input type="radio" name="size" id="size2">
+                    <input type="radio" name="size" id="size1">
+                    <input type="radio" name="size" id="size2" checked>
                     <input type="radio" name="size" id="size3">
 
-                    <input type="text" onkeyup="this.setAttribute('value', this.value);" value="" />
+                    
 
                     <input id="test" type="range" oninput="this.setAttribute('value', this.value);" min="0" max="10" value="5" />
                 </form>
@@ -50,6 +51,7 @@
                 
 
                 <div>
+                    <label for="keys">Play with Keyboard</label>
                     <ul>
                         <li><label></label></li>
                         <li><label></label></li>

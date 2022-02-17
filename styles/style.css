@@ -232,49 +232,155 @@ form:has([id=size3]:checked) + div li {
     width: 18px;
 }
 
-form:has(input[type="text"][value$="a"]) ~  div:nth-of-type(1) li {
+input[type="text"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; /* added line */
+    border: 0;
+}
+
+input[type="text"][value$="a"] ~ article div:nth-of-type(1) li {
     background-color: yellow;
     box-shadow: 0px 0px 10px 2px yellow;
 }
 
-form:has(input[type="text"][value$="s"]) ~  div:nth-of-type(1) li {
+input[type="text"][value$="a"] ~ article div:nth-of-type(2) li:nth-child(1) {
+    border-top: 1px solid hsl(0, 0%, 47%);
+    border-left: 1px solid hsl(0, 0%, 60%);
+    border-bottom: 1px solid hsl(0, 0%, 60%);
+    box-shadow: 2px 0 3px var(--black-10) inset,
+      -5px 5px 20px var(--black-20) inset, 0 0 3px var(--black-20);
+    background: linear-gradient(to bottom, white 0%, hsl(0, 0%, 91%) 100%);
+    outline: none;
+}
+
+input[type="text"][value$="s"] ~ article div:nth-of-type(1) li {
     background-color: blue;
     box-shadow: 0px 0px 10px 2px blue;
 }
 
-form:has(input[type="text"][value$="d"]) ~  div:nth-of-type(1) li {
+input[type="text"][value$="s"] ~ article div:nth-of-type(2) li:nth-child(2) {
+    box-shadow: -1px -1px 2px var(--white-20) inset,
+      0 -2px 2px 3px var(--black-60) inset, 0 1px 2px var(--black-50);
+    background: linear-gradient(
+      to right,
+      hsl(0, 0%, 27%) 0%,
+      hsl(0, 0%, 13%) 100%
+    );
+    outline: none;
+}
+
+input[type="text"][value$="d"] ~ article div:nth-of-type(1) li {
     background-color: rgb(255, 123, 0);
     box-shadow: 0px 0px 10px 2px rgb(255, 123, 0);
 }
 
-form:has(input[type="text"][value$="f"]) ~  div:nth-of-type(1) li {
+input[type="text"][value$="d"] ~ article div:nth-of-type(2) li:nth-child(3) {
+    border-top: 1px solid hsl(0, 0%, 47%);
+    border-left: 1px solid hsl(0, 0%, 60%);
+    border-bottom: 1px solid hsl(0, 0%, 60%);
+    box-shadow: 2px 0 3px var(--black-10) inset,
+      -5px 5px 20px var(--black-20) inset, 0 0 3px var(--black-20);
+    background: linear-gradient(to bottom, white 0%, hsl(0, 0%, 91%) 100%);
+    outline: none;
+}
+
+input[type="text"][value$="f"] ~ article div:nth-of-type(1) li {
     background-color: rgb(0, 255, 64);
     box-shadow: 0px 0px 10px 2px rgb(0, 255, 64);
 }
 
-form:has(input[type="text"][value$="g"]) ~  div:nth-of-type(1) li {
+input[type="text"][value$="f"] ~ article div:nth-of-type(2) li:nth-child(4) {
+    box-shadow: -1px -1px 2px var(--white-20) inset,
+      0 -2px 2px 3px var(--black-60) inset, 0 1px 2px var(--black-50);
+    background: linear-gradient(
+      to right,
+      hsl(0, 0%, 27%) 0%,
+      hsl(0, 0%, 13%) 100%
+    );
+    outline: none;
+}
+
+input[type="text"][value$="g"] ~ article div:nth-of-type(1) li {
     background-color: rgb(195, 0, 255);
     box-shadow: 0px 0px 10px 2px rgb(195, 0, 255);
 }
 
-form:has(input[type="text"][value$="h"]) ~  div:nth-of-type(1) li {
+input[type="text"][value$="g"] ~ article div:nth-of-type(2) li:nth-child(5) {
+    border-top: 1px solid hsl(0, 0%, 47%);
+    border-left: 1px solid hsl(0, 0%, 60%);
+    border-bottom: 1px solid hsl(0, 0%, 60%);
+    box-shadow: 2px 0 3px var(--black-10) inset,
+      -5px 5px 20px var(--black-20) inset, 0 0 3px var(--black-20);
+    background: linear-gradient(to bottom, white 0%, hsl(0, 0%, 91%) 100%);
+    outline: none;
+}
+
+input[type="text"][value$="h"] ~ article div:nth-of-type(1) li {
     background-color: rgb(255, 0, 119);
     box-shadow: 0px 0px 10px 2px rgb(255, 0, 119);
 }
 
-form:has(input[type="text"][value$="j"]) ~  div:nth-of-type(1) li {
+input[type="text"][value$="h"] ~ article div:nth-of-type(2) li:nth-child(6) {
+    box-shadow: -1px -1px 2px var(--white-20) inset,
+      0 -2px 2px 3px var(--black-60) inset, 0 1px 2px var(--black-50);
+    background: linear-gradient(
+      to right,
+      hsl(0, 0%, 27%) 0%,
+      hsl(0, 0%, 13%) 100%
+    );
+    outline: none;
+}
+
+input[type="text"][value$="j"] ~ article div:nth-of-type(1) li {
     background-color: rgb(0, 238, 255);
     box-shadow: 0px 0px 10px 2px rgb(0, 238, 255);
 }
 
-form:has(input[type="text"][value$="k"]) ~  div:nth-of-type(1) li {
+input[type="text"][value$="j"] ~ article div:nth-of-type(2) li:nth-child(7) {
+    border-top: 1px solid hsl(0, 0%, 47%);
+    border-left: 1px solid hsl(0, 0%, 60%);
+    border-bottom: 1px solid hsl(0, 0%, 60%);
+    box-shadow: 2px 0 3px var(--black-10) inset,
+      -5px 5px 20px var(--black-20) inset, 0 0 3px var(--black-20);
+    background: linear-gradient(to bottom, white 0%, hsl(0, 0%, 91%) 100%);
+    outline: none;
+}
+
+input[type="text"][value$="k"] ~ article div:nth-of-type(1) li {
     background-color: rgb(33, 134, 95);
     box-shadow: 0px 0px 10px 2px rgb(33, 134, 95);
 }
 
-form:has(input[type="text"][value$="l"]) ~  div:nth-of-type(1) li {
+input[type="text"][value$="k"] ~ article div:nth-of-type(2) li:nth-child(8) {
+    box-shadow: -1px -1px 2px var(--white-20) inset,
+      0 -2px 2px 3px var(--black-60) inset, 0 1px 2px var(--black-50);
+    background: linear-gradient(
+      to right,
+      hsl(0, 0%, 27%) 0%,
+      hsl(0, 0%, 13%) 100%
+    );
+    outline: none;
+}
+
+input[type="text"][value$="l"] ~ article div:nth-of-type(1) li {
     background-color: rgb(85, 44, 44);
     box-shadow: 0px 0px 10px 2px rgb(85, 44, 44);
+}
+
+input[type="text"][value$="l"] ~ article div:nth-of-type(2) li:nth-child(9) {
+    border-top: 1px solid hsl(0, 0%, 47%);
+    border-left: 1px solid hsl(0, 0%, 60%);
+    border-bottom: 1px solid hsl(0, 0%, 60%);
+    box-shadow: 2px 0 3px var(--black-10) inset,
+      -5px 5px 20px var(--black-20) inset, 0 0 3px var(--black-20);
+    background: linear-gradient(to bottom, white 0%, hsl(0, 0%, 91%) 100%);
+    outline: none;
 }
 
 
@@ -335,6 +441,7 @@ div:nth-of-type(2) {
     height: 50%;
     /* background: yellow; */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -405,4 +512,10 @@ div:nth-of-type(2) li:nth-child(even):active {
       hsl(0, 0%, 13%) 100%
     );
     outline: none;
-  }
+}
+
+
+label[for="keys"] {
+    margin-right: 1em;
+    color: #fff;
+}
