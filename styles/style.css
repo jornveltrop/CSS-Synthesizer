@@ -130,7 +130,6 @@ li {
 	border-radius: 50%;
 	background-color: #941414;
     animation: vertical-movement 2.5s infinite ease-in-out;
-    transition: all .5s ease;
     animation-play-state: paused;
     opacity: 0;
     transition: all .5s ease-in-out;
@@ -218,6 +217,100 @@ form:has([id=size3]:checked) + div li {
     width: 18px;
 }
 
+form:has(input[type="text"][value$="a"]) ~  div li {
+    background-color: yellow;
+    box-shadow: 0px 0px 10px 2px yellow;
+}
+
+form:has(input[type="text"][value$="s"]) ~  div li {
+    background-color: blue;
+    box-shadow: 0px 0px 10px 2px blue;
+}
+
+form:has(input[type="text"][value$="d"]) ~  div li {
+    background-color: rgb(255, 123, 0);
+    box-shadow: 0px 0px 10px 2px rgb(255, 123, 0);
+}
+
+form:has(input[type="text"][value$="f"]) ~  div li {
+    background-color: rgb(0, 255, 64);
+    box-shadow: 0px 0px 10px 2px rgb(0, 255, 64);
+}
+
+form:has(input[type="text"][value$="g"]) ~  div li {
+    background-color: rgb(195, 0, 255);
+    box-shadow: 0px 0px 10px 2px rgb(195, 0, 255);
+}
+
+form:has(input[type="text"][value$="h"]) ~  div li {
+    background-color: rgb(255, 0, 119);
+    box-shadow: 0px 0px 10px 2px rgb(255, 0, 119);
+}
+
+form:has(input[type="text"][value$="j"]) ~  div li {
+    background-color: rgb(0, 238, 255);
+    box-shadow: 0px 0px 10px 2px rgb(0, 238, 255);
+}
+
+form:has(input[type="text"][value$="k"]) ~  div li {
+    background-color: rgb(33, 134, 95);
+    box-shadow: 0px 0px 10px 2px rgb(33, 134, 95);
+}
+
+form:has(input[type="text"][value$="l"]) ~  div li {
+    background-color: rgb(85, 44, 44);
+    box-shadow: 0px 0px 10px 2px rgb(85, 44, 44);
+}
+
+
+input[type="range"] {
+    margin-top: 6em;
+    transform: rotate(-90deg);
+}
+
+form:has(input[type="range"][value="10"]) ~  div li {
+    animation-duration: .22s;
+}
+
+form:has(input[type="range"][value="9"]) ~  div li {
+    animation-duration: .33s;
+}
+
+form:has(input[type="range"][value="8"]) ~  div li {
+    animation-duration: .42s;
+}
+
+form:has(input[type="range"][value="7"]) ~  div li {
+    animation-duration: .6s;
+}
+
+form:has(input[type="range"][value="6"]) ~  div li {
+    animation-duration: 1.3s;
+}
+
+form:has(input[type="range"][value="5"]) ~  div li {
+    animation-duration: 1.8s;
+}
+
+form:has(input[type="range"][value="4"]) ~  div li {
+    animation-duration: 2s;
+}
+
+form:has(input[type="range"][value="3"]) ~  div li {
+    animation-duration: 4s;
+}
+
+form:has(input[type="range"][value="2"]) ~  div li {
+    animation-duration: 5s;
+}
+
+form:has(input[type="range"][value="1"]) ~  div li {
+    animation-duration: 7s;
+}
+
+form:has(input[type="range"][value="0"]) ~  div li {
+    animation-duration: 10s;
+}
 
 div:nth-of-type(2) {
     width: 100%;

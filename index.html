@@ -24,6 +24,10 @@
                     <input type="radio" name="size" id="size1" checked>
                     <input type="radio" name="size" id="size2">
                     <input type="radio" name="size" id="size3">
+
+                    <input type="text" onkeyup="this.setAttribute('value', this.value);" value="" />
+
+                    <input id="test" type="range" oninput="this.setAttribute('value', this.value);" min="0" max="10" value="5" />
                 </form>
 
                 <div>
