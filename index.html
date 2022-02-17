@@ -15,14 +15,22 @@
             <img src="img/woodTexture.jpeg">
             <section>
                 <form>
-                    <label for="on-off">ON</label>
-                    <label for="start">START</label>
+                    <fieldset>
+                        <label for="on-off"><p>ON/OFF</p></label>
+                        <label for="start">START</label>
+                        <label for="...">...</label>
+                    </fieldset>
+
+                    <input type="radio" name="size" id="size1" checked>
+                    <input type="radio" name="size" id="size2">
+                    <input type="radio" name="size" id="size3">
                 </form>
 
                 <div>
                     <ul>
                         <input type="checkbox" name="on-off" id="on-off">
                         <input type="checkbox" name="start" id="start">
+                        
                         <li style="--index: -0.3s;"></li>
                         <li style="--index: -0.6s;"></li>
                         <li style="--index: -0.9s;"></li>

@@ -80,12 +80,12 @@ section {
     width: 100%;
     height: 100%;
     margin: 3em;
-    background-color: #d6d6de;
-    background: linear-gradient( #ffffff,#e3e3e3);
+    background-color: #303030;
+    background: linear-gradient( #303030,#252525);
     border-radius: 1px;
     height: calc(100% - 6em);
     width: calc(100% - 6em);
-    box-shadow: 0 -2px 2px -2px #7d6f63 inset, 0px 0 1.25px 1px #a16c42 inset, 0 0 1px 1.5px rgb(82 67 56 / 50%) inset, 0 0 2.5px 3px rgb(82 70 56 / 20%) inset, 0 0 4px 5px rgb(82 58 56 / 10%) inset, -1px 0 1px #754c3cf2, 0 0 5px 3px #8b5e3a;
+    box-shadow:  0 -2px 2px -2px #000000 inset, 0px 0 1.25px 1px #a16c42 inset, 0 0 1px 1.5px rgb(0 0 0 / 50%) inset, 0 0 2.5px 3px rgb(0 0 0 / 20%) inset, 0 0 4px 5px rgb(82 58 56 / 10%) inset, -1px 0 1px #915943f2, 0 0 5px 3px #8b5e3a;
 }
 
 form {
@@ -108,11 +108,19 @@ ul {
     list-style-type: none;
     background: black;
     height: 10em;
-    width: 90%;
+    width: 80%;
 
     display: flex;
     justify-content:space-around;
     align-items: center;
+
+    box-shadow: 
+    0 -2px 2px -2px rgb(41 38 38) inset, 
+    0px 0 1.25px 1px #292625 inset, 
+    0 0 1px 1.5px rgb(48 42 41 / 50%) inset, 
+    0 0 2.5px 3px rgb(52 42 41 / 20%) inset, 
+    0 0 4px 5px rgb(45 42 42 / 10%) inset, 
+    -1px 0 1px #292929, 0 0 5px 3px #252525;
 }
 
 li {
@@ -120,13 +128,14 @@ li {
 	height: 6px;
 	width: 6px;
 	border-radius: 50%;
-	background-color: #fff;
+	background-color: #941414;
     animation: vertical-movement 2.5s infinite ease-in-out;
     transition: all .5s ease;
     animation-play-state: paused;
     opacity: 0;
     transition: all .5s ease-in-out;
     animation-delay: var(--index);
+    box-shadow: 0px 0px 10px 2px #941414;
 }
 
 
@@ -141,15 +150,48 @@ li {
 	}
 }
 
-input {
+ul input {
     position: absolute;
     top: 0;
     visibility: hidden;
 }
 
-label[for=on-off] {
+fieldset:first-of-type {
+    position: relative;
+    display: flex;
+    background-color: #000;
+    border-radius: 3px;
+    padding: 1px;
+    width: fit-content;
+    border: none;
+    min-inline-size: none;
+}
+
+fieldset:first-of-type label {
     background-color: grey;
-    padding: 1em;
+    padding: .5em 1em;
+    cursor: pointer;
+    background-image: linear-gradient(to top, #242424 0%, #303030 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1px;
+    transition: 0.2s;
+    box-shadow: 
+        inset 0 20px 4px -21px rgb(255 255 255 / 40%), 
+        0 9px 9px 0 rgb(0 0 0 / 30%);
+    color: #fff;
+}
+
+fieldset:first-of-type label:active {
+    background-image: linear-gradient(to top, #151515 0%, #1d1d1d 100%);
+    box-shadow: inset 0 16px 14px -21px transparent, 
+    0 0px 13px 0 rgb(0 0 0 / 30%), inset 0 0 7px 2px rgb(0 0 0 / 40%);
+}
+
+fieldset:first-of-type label:active p {
+    transform: scale(.98);
+    transition: all .2s;
 }
 
 input[id=on-off]:checked ~ li{
@@ -160,6 +202,22 @@ input[id=start]:checked ~ li {
     animation-play-state: running;
     animation-delay: var(--index);
 }
+form:has([id=size1]:checked) + div li {
+    height: 6px;
+    width: 6px;
+}
+
+form:has([id=size2]:checked) + div li {
+    height: 10px;
+    width: 10px;
+}
+
+
+form:has([id=size3]:checked) + div li {
+    height: 18px;
+    width: 18px;
+}
+
 
 div:nth-of-type(2) {
     width: 100%;
