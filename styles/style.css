@@ -232,7 +232,11 @@ form:has([id=size3]:checked) + div li {
     width: 18px;
 }
 
-input[type="text"] {
+input, input:active {
+    cursor: pointer;
+}
+
+input[type="text"], input[type="button"] {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -244,12 +248,13 @@ input[type="text"] {
     border: 0;
 }
 
-input[type="text"][value$="a"] ~ article div:nth-of-type(1) li {
+input[type="text"][value$="a"] ~ article div:nth-of-type(1) li,
+input[id="piano1"]:active ~ article div:nth-of-type(1) li  {
     background-color: yellow;
     box-shadow: 0px 0px 10px 2px yellow;
 }
 
-input[type="text"][value$="a"] ~ article div:nth-of-type(2) li:nth-child(1) {
+input[type="text"][value$="a"] ~ article div:nth-of-type(2) li:nth-child(1) label {
     border-top: 1px solid hsl(0, 0%, 47%);
     border-left: 1px solid hsl(0, 0%, 60%);
     border-bottom: 1px solid hsl(0, 0%, 60%);
@@ -259,12 +264,13 @@ input[type="text"][value$="a"] ~ article div:nth-of-type(2) li:nth-child(1) {
     outline: none;
 }
 
-input[type="text"][value$="s"] ~ article div:nth-of-type(1) li {
+input[type="text"][value$="s"] ~ article div:nth-of-type(1) li,
+input[id="piano2"]:active ~ article div:nth-of-type(1) li {
     background-color: blue;
     box-shadow: 0px 0px 10px 2px blue;
 }
 
-input[type="text"][value$="s"] ~ article div:nth-of-type(2) li:nth-child(2) {
+input[type="text"][value$="s"] ~ article div:nth-of-type(2) li:nth-child(2) label {
     box-shadow: -1px -1px 2px var(--white-20) inset,
       0 -2px 2px 3px var(--black-60) inset, 0 1px 2px var(--black-50);
     background: linear-gradient(
@@ -275,12 +281,13 @@ input[type="text"][value$="s"] ~ article div:nth-of-type(2) li:nth-child(2) {
     outline: none;
 }
 
-input[type="text"][value$="d"] ~ article div:nth-of-type(1) li {
+input[type="text"][value$="d"] ~ article div:nth-of-type(1) li,
+input[id="piano3"]:active ~ article div:nth-of-type(1) li {
     background-color: rgb(255, 123, 0);
     box-shadow: 0px 0px 10px 2px rgb(255, 123, 0);
 }
 
-input[type="text"][value$="d"] ~ article div:nth-of-type(2) li:nth-child(3) {
+input[type="text"][value$="d"] ~ article div:nth-of-type(2) li:nth-child(3) label {
     border-top: 1px solid hsl(0, 0%, 47%);
     border-left: 1px solid hsl(0, 0%, 60%);
     border-bottom: 1px solid hsl(0, 0%, 60%);
@@ -290,12 +297,13 @@ input[type="text"][value$="d"] ~ article div:nth-of-type(2) li:nth-child(3) {
     outline: none;
 }
 
-input[type="text"][value$="f"] ~ article div:nth-of-type(1) li {
+input[type="text"][value$="f"] ~ article div:nth-of-type(1) li,
+input[id="piano4"]:active ~ article div:nth-of-type(1) li {
     background-color: rgb(0, 255, 64);
     box-shadow: 0px 0px 10px 2px rgb(0, 255, 64);
 }
 
-input[type="text"][value$="f"] ~ article div:nth-of-type(2) li:nth-child(4) {
+input[type="text"][value$="f"] ~ article div:nth-of-type(2) li:nth-child(4) label {
     box-shadow: -1px -1px 2px var(--white-20) inset,
       0 -2px 2px 3px var(--black-60) inset, 0 1px 2px var(--black-50);
     background: linear-gradient(
@@ -306,12 +314,13 @@ input[type="text"][value$="f"] ~ article div:nth-of-type(2) li:nth-child(4) {
     outline: none;
 }
 
-input[type="text"][value$="g"] ~ article div:nth-of-type(1) li {
+input[type="text"][value$="g"] ~ article div:nth-of-type(1) li,
+input[id="piano5"]:active ~ article div:nth-of-type(1) li {
     background-color: rgb(195, 0, 255);
     box-shadow: 0px 0px 10px 2px rgb(195, 0, 255);
 }
 
-input[type="text"][value$="g"] ~ article div:nth-of-type(2) li:nth-child(5) {
+input[type="text"][value$="g"] ~ article div:nth-of-type(2) li:nth-child(5) label {
     border-top: 1px solid hsl(0, 0%, 47%);
     border-left: 1px solid hsl(0, 0%, 60%);
     border-bottom: 1px solid hsl(0, 0%, 60%);
@@ -321,12 +330,13 @@ input[type="text"][value$="g"] ~ article div:nth-of-type(2) li:nth-child(5) {
     outline: none;
 }
 
-input[type="text"][value$="h"] ~ article div:nth-of-type(1) li {
+input[type="text"][value$="h"] ~ article div:nth-of-type(1) li,
+input[id="piano6"]:active ~ article div:nth-of-type(1) li {
     background-color: rgb(255, 0, 119);
     box-shadow: 0px 0px 10px 2px rgb(255, 0, 119);
 }
 
-input[type="text"][value$="h"] ~ article div:nth-of-type(2) li:nth-child(6) {
+input[type="text"][value$="h"] ~ article div:nth-of-type(2) li:nth-child(6) label {
     box-shadow: -1px -1px 2px var(--white-20) inset,
       0 -2px 2px 3px var(--black-60) inset, 0 1px 2px var(--black-50);
     background: linear-gradient(
@@ -337,12 +347,13 @@ input[type="text"][value$="h"] ~ article div:nth-of-type(2) li:nth-child(6) {
     outline: none;
 }
 
-input[type="text"][value$="j"] ~ article div:nth-of-type(1) li {
+input[type="text"][value$="j"] ~ article div:nth-of-type(1) li,
+input[id="piano7"]:active ~ article div:nth-of-type(1) li {
     background-color: rgb(0, 238, 255);
     box-shadow: 0px 0px 10px 2px rgb(0, 238, 255);
 }
 
-input[type="text"][value$="j"] ~ article div:nth-of-type(2) li:nth-child(7) {
+input[type="text"][value$="j"] ~ article div:nth-of-type(2) li:nth-child(7) label {
     border-top: 1px solid hsl(0, 0%, 47%);
     border-left: 1px solid hsl(0, 0%, 60%);
     border-bottom: 1px solid hsl(0, 0%, 60%);
@@ -352,12 +363,13 @@ input[type="text"][value$="j"] ~ article div:nth-of-type(2) li:nth-child(7) {
     outline: none;
 }
 
-input[type="text"][value$="k"] ~ article div:nth-of-type(1) li {
+input[type="text"][value$="k"] ~ article div:nth-of-type(1) li,
+input[id="piano8"]:active ~ article div:nth-of-type(1) li {
     background-color: rgb(33, 134, 95);
     box-shadow: 0px 0px 10px 2px rgb(33, 134, 95);
 }
 
-input[type="text"][value$="k"] ~ article div:nth-of-type(2) li:nth-child(8) {
+input[type="text"][value$="k"] ~ article div:nth-of-type(2) li:nth-child(8) label {
     box-shadow: -1px -1px 2px var(--white-20) inset,
       0 -2px 2px 3px var(--black-60) inset, 0 1px 2px var(--black-50);
     background: linear-gradient(
@@ -368,12 +380,13 @@ input[type="text"][value$="k"] ~ article div:nth-of-type(2) li:nth-child(8) {
     outline: none;
 }
 
-input[type="text"][value$="l"] ~ article div:nth-of-type(1) li {
+input[type="text"][value$="l"] ~ article div:nth-of-type(1) li,
+input[id="piano9"]:active ~ article div:nth-of-type(1) li {
     background-color: rgb(85, 44, 44);
     box-shadow: 0px 0px 10px 2px rgb(85, 44, 44);
 }
 
-input[type="text"][value$="l"] ~ article div:nth-of-type(2) li:nth-child(9) {
+input[type="text"][value$="l"] ~ article div:nth-of-type(2) li:nth-child(9) label {
     border-top: 1px solid hsl(0, 0%, 47%);
     border-left: 1px solid hsl(0, 0%, 60%);
     border-bottom: 1px solid hsl(0, 0%, 60%);
@@ -452,7 +465,7 @@ div:nth-of-type(2) ul {
     padding: 1em;
 }
 
-div:nth-of-type(2) li {
+div:nth-of-type(2) label {
     position: relative;
     float: left;
     display: flex;
@@ -463,7 +476,7 @@ div:nth-of-type(2) li {
     cursor: pointer;
 }
 
-div:nth-of-type(2) li:nth-child(odd) {
+div:nth-of-type(2) li:nth-child(odd) label {
     height: 12.5rem;
     width: 3.5rem;
     z-index: 1;
@@ -480,7 +493,7 @@ div:nth-of-type(2) li:nth-child(odd) {
     border-bottom: 1px solid hsl(0, 0%, 0%);
 }
 
-div:nth-of-type(2) li:nth-child(odd):active {
+div:nth-of-type(2) li:nth-child(odd) label:active {
     border-top: 1px solid hsl(0, 0%, 47%);
     border-left: 1px solid hsl(0, 0%, 60%);
     border-bottom: 1px solid hsl(0, 0%, 60%);
@@ -490,7 +503,7 @@ div:nth-of-type(2) li:nth-child(odd):active {
     outline: none;
   }
 
-div:nth-of-type(2) li:nth-child(even) {
+div:nth-of-type(2) li:nth-child(even) label{
     height: 8rem;
     width: 2rem;
     margin: 0 0 0 -1rem;
@@ -503,7 +516,7 @@ div:nth-of-type(2) li:nth-child(even) {
     color: var(--white-50);
 }
 
-div:nth-of-type(2) li:nth-child(even):active {
+div:nth-of-type(2) li:nth-child(even) label:active {
     box-shadow: -1px -1px 2px var(--white-20) inset,
       0 -2px 2px 3px var(--black-60) inset, 0 1px 2px var(--black-50);
     background: linear-gradient(
@@ -514,7 +527,11 @@ div:nth-of-type(2) li:nth-child(even):active {
     outline: none;
 }
 
+/* PIANO ON CLICK ACTIVES */
 
+ /* ~ article div:nth-of-type(2) li:nth-child(1) label { */
+
+/* PLAY WITH KEYBOARD LABEL */
 label[for="keys"] {
     margin-right: 1em;
     color: #fff;
