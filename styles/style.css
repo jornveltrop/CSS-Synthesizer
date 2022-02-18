@@ -197,22 +197,56 @@ fieldset:first-of-type label {
     color: #fff;
 }
 
-fieldset:first-of-type label:active {
+fieldset:first-of-type label:nth-child(1) {
+    width: 2em;
+}
+
+fieldset:first-of-type label:nth-child(1)::before {
+    content: "OFF";
+    color: grey;
+}
+
+input[id=on-off]:checked ~ article form fieldset:first-of-type label:nth-child(1)::before {
+    content: "ON";
+    color: #fff;
+    text-shadow: 0px 0px 5px #fff;
+}
+
+fieldset:first-of-type label:nth-child(2) {
+    width: 3em;
+}
+
+fieldset:first-of-type label:nth-child(2)::before {
+    content: "PAUSE";
+    color: grey;
+}
+
+input[id=play-pause]:checked ~ article form fieldset:first-of-type label:nth-child(2)::before {
+    content: "PLAY";
+    color: #fff;
+    text-shadow: 0px 0px 5px #fff;
+}
+
+fieldset:first-of-type label:active,
+input[id=on-off]:checked ~ article form fieldset:first-of-type label:nth-child(1),
+input[id=play-pause]:checked ~ article form fieldset:first-of-type label:nth-child(2) {
     background-image: linear-gradient(to top, #151515 0%, #1d1d1d 100%);
     box-shadow: inset 0 16px 14px -21px transparent, 
     0 0px 13px 0 rgb(0 0 0 / 30%), inset 0 0 7px 2px rgb(0 0 0 / 40%);
 }
 
-fieldset:first-of-type label:active p {
+fieldset:first-of-type label:active p,
+input[id=on-off]:checked ~ article form fieldset:first-of-type label:nth-child(1) p,
+input[id=play-pause]:checked ~ article form fieldset:first-of-type label:nth-child(2) p {
     transform: scale(.98);
     transition: all .2s;
 }
 
-input[id=on-off]:checked ~ li{
+input[id=on-off]:checked ~ article div:nth-of-type(1) li {
     opacity: 1;
 }
 
-input[id=start]:checked ~ li {
+input[id=play-pause]:checked ~ article div:nth-of-type(1) li {
     animation-play-state: running;
     animation-delay: var(--index);
 }
@@ -236,7 +270,7 @@ input, input:active {
     cursor: pointer;
 }
 
-input[type="text"], input[type="button"] {
+input[type="text"], input[type="button"], input[type="checkbox"] {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -249,7 +283,7 @@ input[type="text"], input[type="button"] {
 }
 
 input[type="text"][value$="a"] ~ article div:nth-of-type(1) li,
-input[id="piano1"]:active ~ article div:nth-of-type(1) li  {
+input[id="piano1"]:active ~ article div:nth-of-type(1) ul li  {
     background-color: yellow;
     box-shadow: 0px 0px 10px 2px yellow;
 }
@@ -265,7 +299,7 @@ input[type="text"][value$="a"] ~ article div:nth-of-type(2) li:nth-child(1) labe
 }
 
 input[type="text"][value$="s"] ~ article div:nth-of-type(1) li,
-input[id="piano2"]:active ~ article div:nth-of-type(1) li {
+input[id="piano2"]:active ~ article div:nth-of-type(1) ul li {
     background-color: blue;
     box-shadow: 0px 0px 10px 2px blue;
 }
@@ -282,7 +316,7 @@ input[type="text"][value$="s"] ~ article div:nth-of-type(2) li:nth-child(2) labe
 }
 
 input[type="text"][value$="d"] ~ article div:nth-of-type(1) li,
-input[id="piano3"]:active ~ article div:nth-of-type(1) li {
+input[id="piano3"]:active ~ article div:nth-of-type(1) ul li {
     background-color: rgb(255, 123, 0);
     box-shadow: 0px 0px 10px 2px rgb(255, 123, 0);
 }
@@ -298,7 +332,7 @@ input[type="text"][value$="d"] ~ article div:nth-of-type(2) li:nth-child(3) labe
 }
 
 input[type="text"][value$="f"] ~ article div:nth-of-type(1) li,
-input[id="piano4"]:active ~ article div:nth-of-type(1) li {
+input[id="piano4"]:active ~ article div:nth-of-type(1) ul li {
     background-color: rgb(0, 255, 64);
     box-shadow: 0px 0px 10px 2px rgb(0, 255, 64);
 }
@@ -315,7 +349,7 @@ input[type="text"][value$="f"] ~ article div:nth-of-type(2) li:nth-child(4) labe
 }
 
 input[type="text"][value$="g"] ~ article div:nth-of-type(1) li,
-input[id="piano5"]:active ~ article div:nth-of-type(1) li {
+input[id="piano5"]:active ~ article div:nth-of-type(1) ul li {
     background-color: rgb(195, 0, 255);
     box-shadow: 0px 0px 10px 2px rgb(195, 0, 255);
 }
@@ -331,7 +365,7 @@ input[type="text"][value$="g"] ~ article div:nth-of-type(2) li:nth-child(5) labe
 }
 
 input[type="text"][value$="h"] ~ article div:nth-of-type(1) li,
-input[id="piano6"]:active ~ article div:nth-of-type(1) li {
+input[id="piano6"]:active ~ article div:nth-of-type(1) ul li {
     background-color: rgb(255, 0, 119);
     box-shadow: 0px 0px 10px 2px rgb(255, 0, 119);
 }
@@ -348,7 +382,7 @@ input[type="text"][value$="h"] ~ article div:nth-of-type(2) li:nth-child(6) labe
 }
 
 input[type="text"][value$="j"] ~ article div:nth-of-type(1) li,
-input[id="piano7"]:active ~ article div:nth-of-type(1) li {
+input[id="piano7"]:active ~ article div:nth-of-type(1) ul li {
     background-color: rgb(0, 238, 255);
     box-shadow: 0px 0px 10px 2px rgb(0, 238, 255);
 }
@@ -364,7 +398,7 @@ input[type="text"][value$="j"] ~ article div:nth-of-type(2) li:nth-child(7) labe
 }
 
 input[type="text"][value$="k"] ~ article div:nth-of-type(1) li,
-input[id="piano8"]:active ~ article div:nth-of-type(1) li {
+input[id="piano8"]:active ~ article div:nth-of-type(1) ul li {
     background-color: rgb(33, 134, 95);
     box-shadow: 0px 0px 10px 2px rgb(33, 134, 95);
 }
@@ -381,7 +415,7 @@ input[type="text"][value$="k"] ~ article div:nth-of-type(2) li:nth-child(8) labe
 }
 
 input[type="text"][value$="l"] ~ article div:nth-of-type(1) li,
-input[id="piano9"]:active ~ article div:nth-of-type(1) li {
+input[id="piano9"]:active ~ article div:nth-of-type(1) ul li {
     background-color: rgb(85, 44, 44);
     box-shadow: 0px 0px 10px 2px rgb(85, 44, 44);
 }
@@ -527,12 +561,22 @@ div:nth-of-type(2) li:nth-child(even) label:active {
     outline: none;
 }
 
-/* PIANO ON CLICK ACTIVES */
-
- /* ~ article div:nth-of-type(2) li:nth-child(1) label { */
+/* PLAY WITH KEYBOARD LABEL */
+label[for="keys"] {
+    margin-right: 1em;
+    color: #fff;
+}
 
 /* PLAY WITH KEYBOARD LABEL */
 label[for="keys"] {
     margin-right: 1em;
     color: #fff;
+}
+
+article div:nth-of-type(2) label[for="keys"]::before {
+    content: "Play with keyboard";
+}
+
+input[type="text"]:focus ~ article div:nth-of-type(2) label[for="keys"]::before {
+    content: "Playing with keyboard";
 }
