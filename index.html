@@ -14,6 +14,10 @@
         <input type="checkbox" name="on-off" id="on-off">
         <input type="checkbox" name="play-pause" id="play-pause">
 
+        <input type="radio" name="size" id="size1">
+        <input type="radio" name="size" id="size2" checked>
+        <input type="radio" name="size" id="size3">
+
         <input type="text" onkeyup="this.setAttribute('value', this.value);" value="" id="keys" autocorrect="off" />
 
         <input type="button" id="piano1"/>
@@ -33,14 +37,14 @@
                     <fieldset>
                         <label for="on-off"></label>
                         <label for="play-pause"></label>
-                        <label for="...">...</label>
                     </fieldset>
 
-                    <input type="radio" name="size" id="size1">
-                    <input type="radio" name="size" id="size2" checked>
-                    <input type="radio" name="size" id="size3">
+                    <fieldset>
+                        <label for="size1">een</label>
+                        <label for="size2">twee</label>
+                        <label for="size3">drie</label>
+                    </fieldset>
 
-                    
 
                     <input id="test" type="range" oninput="this.setAttribute('value', this.value);" min="0" max="10" value="5" />
                 </form>

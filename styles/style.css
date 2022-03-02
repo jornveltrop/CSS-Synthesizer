@@ -247,21 +247,24 @@ input[id=play-pause]:checked ~ article div:nth-of-type(1) li {
     animation-play-state: running;
     animation-delay: var(--index);
 }
-form:has([id=size1]:checked) + div li {
+
+/* SIZE */
+input[id=size1]:checked ~ article div:nth-of-type(1) li {
     height: 6px;
     width: 6px;
 }
 
-form:has([id=size2]:checked) + div li {
+input[id=size2]:checked ~ article div:nth-of-type(1) li{
     height: 10px;
     width: 10px;
 }
 
-
-form:has([id=size3]:checked) + div li {
+input[id=size3]:checked ~ article div:nth-of-type(1) li {
     height: 18px;
     width: 18px;
 }
+
+
 
 input, input:active {
     cursor: pointer;
