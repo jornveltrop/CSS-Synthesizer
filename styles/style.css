@@ -199,12 +199,12 @@ fieldset:first-of-type label:nth-child(1) {
 }
 
 fieldset:first-of-type label:nth-child(1)::before {
-    content: "OFF";
+    content: "power_settings_new";
     color: grey;
 }
 
 input[id=on-off]:checked ~ article form fieldset:first-of-type label:nth-child(1)::before {
-    content: "ON";
+    content: "power_settings_new";
     color: #fff;
     text-shadow: 0px 0px 5px #fff;
 }
@@ -214,12 +214,12 @@ fieldset:first-of-type label:nth-child(2) {
 }
 
 fieldset:first-of-type label:nth-child(2)::before {
-    content: "PAUSE";
+    content: "pause";
     color: grey;
 }
 
 input[id=play-pause]:checked ~ article form fieldset:first-of-type label:nth-child(2)::before {
-    content: "PLAY";
+    content: "play_arrow";
     color: #fff;
     text-shadow: 0px 0px 5px #fff;
 }
