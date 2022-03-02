@@ -6,6 +6,7 @@
 
     <title>Visual Synthesizer</title>
 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
 
 </head>
@@ -35,17 +36,20 @@
             <section>
                 <form>
                     <fieldset>
-                        <label for="on-off"></label>
-                        <label for="play-pause"></label>
+                        <label for="on-off" class="material-icons"></label>
+                        <label for="play-pause" class="material-icons"></label>
                     </fieldset>
 
                     <fieldset>
-                        <label for="size1">een</label>
-                        <label for="size2">twee</label>
-                        <label for="size3">drie</label>
+                        <h2>Size</h2>
+                        <ul>
+                            <li><label for="size1"><div></div></label></li>
+                            <li><label for="size2"><div></div></label></li>
+                            <li><label for="size3"><div></div></label></li>
+                        </ul>
                     </fieldset>
 
-
+                    <h2>Speed</h2>
                     <input id="test" type="range" oninput="this.setAttribute('value', this.value);" min="0" max="10" value="5" />
                 </form>
 

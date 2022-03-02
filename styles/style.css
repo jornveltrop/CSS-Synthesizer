@@ -9,10 +9,10 @@
     --white-80: hsla(0, 0%, 100%, 0.8);
 }
 
-
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html, body {
@@ -23,6 +23,15 @@ html, body {
 
 li {
     list-style-type: none;
+}
+
+h2 {
+    color: grey;
+    text-transform: uppercase;
+    font-size: 1em;
+    margin-bottom: .3em;
+    font-weight: 200;
+    text-shadow: -1px  -1px 0px #0a0a0a;
 }
 
 article {
@@ -103,14 +112,12 @@ section {
 form:first-of-type {
     width: calc(50% - 4em);
     height: calc(50% - 4em);
-    /* background-color: blue; */
     padding: 2em;
 }
 
-div:nth-of-type(1) {
+section > div:nth-of-type(1) {
     height: 50%;
     width: 50%;
-    /* background: red; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -167,7 +174,7 @@ div:nth-of-type(1) ul input {
     visibility: hidden;
 }
 
-fieldset:first-of-type {
+fieldset:nth-child(1) {
     position: relative;
     display: flex;
     background-color: #000;
@@ -176,11 +183,14 @@ fieldset:first-of-type {
     width: fit-content;
     border: none;
     min-inline-size: none;
+    color: #fff;
+    margin-bottom: 1em;
 }
 
-fieldset:first-of-type label {
+fieldset label {
     background-color: grey;
-    padding: .5em 1em;
+    width: auto;
+    padding: .5em;
     cursor: pointer;
     background-image: linear-gradient(to top, #242424 0%, #303030 100%);
     display: flex;
@@ -194,32 +204,29 @@ fieldset:first-of-type label {
     color: #fff;
 }
 
-fieldset:first-of-type label:nth-child(1) {
-    width: 2em;
+fieldset:first-of-type label:nth-child(1),
+fieldset:first-of-type label:nth-child(2) {
+    display: flex;
 }
 
 fieldset:first-of-type label:nth-child(1)::before {
-    content: "OFF";
+    content: "power_settings_new";
     color: grey;
 }
 
 input[id=on-off]:checked ~ article form fieldset:first-of-type label:nth-child(1)::before {
-    content: "ON";
+    content: "power_settings_new";
     color: #fff;
     text-shadow: 0px 0px 5px #fff;
 }
 
-fieldset:first-of-type label:nth-child(2) {
-    width: 3em;
-}
-
 fieldset:first-of-type label:nth-child(2)::before {
-    content: "PAUSE";
+    content: "play_arrow";
     color: grey;
 }
 
 input[id=play-pause]:checked ~ article form fieldset:first-of-type label:nth-child(2)::before {
-    content: "PLAY";
+    content: "pause";
     color: #fff;
     text-shadow: 0px 0px 5px #fff;
 }
@@ -232,10 +239,10 @@ input[id=play-pause]:checked ~ article form fieldset:first-of-type label:nth-chi
     0 0px 13px 0 rgb(0 0 0 / 30%), inset 0 0 7px 2px rgb(0 0 0 / 40%);
 }
 
-fieldset:first-of-type label:active p,
-input[id=on-off]:checked ~ article form fieldset:first-of-type label:nth-child(1) p,
-input[id=play-pause]:checked ~ article form fieldset:first-of-type label:nth-child(2) p {
-    transform: scale(.98);
+fieldset:first-of-type label:active::before,
+input[id=on-off]:checked ~ article form fieldset:first-of-type label:nth-child(1)::before,
+input[id=play-pause]:checked ~ article form fieldset:first-of-type label:nth-child(2)::before {
+    transform: scale(.89);
     transition: all .2s;
 }
 
@@ -247,6 +254,9 @@ input[id=play-pause]:checked ~ article div:nth-of-type(1) li {
     animation-play-state: running;
     animation-delay: var(--index);
 }
+
+
+
 
 /* SIZE */
 input[id=size1]:checked ~ article div:nth-of-type(1) li {
@@ -264,13 +274,82 @@ input[id=size3]:checked ~ article div:nth-of-type(1) li {
     width: 18px;
 }
 
+fieldset:nth-child(2) {
+    border: none;
+    margin-bottom: 1em;
+}
+
+fieldset:nth-child(2) ul {
+    display: flex;
+    gap: .2em;
+}
+
+fieldset:nth-child(2) li {
+    position: relative;
+    display: flex;
+    background-color: #000;
+    border-radius: 100%;
+    padding: 1px;
+    width: fit-content;
+    border: none;
+    min-inline-size: none;
+    color: #fff;
+}
+
+fieldset:nth-child(2) label {
+    height: 2em;
+    width: 2em;
+    border-radius: 100%;
+    padding: 0;
+}
+
+
+fieldset:nth-child(2) li div {
+    background-color: #fff;
+    height: 4px;
+    width: 4px;
+    border-radius: 100%;
+}
+
+fieldset:nth-child(2) li:nth-child(2) div {
+    height: 8px;
+    width: 8px;
+}
+
+fieldset:nth-child(2) li:nth-child(3) div {
+    height: 12px;
+    width: 12px;
+}
+
+fieldset:nth-child(2) label:active,
+input[id=size1]:checked ~ article form fieldset:nth-child(2) li:nth-child(1) label,
+input[id=size2]:checked ~ article form fieldset:nth-child(2) li:nth-child(2) label,
+input[id=size3]:checked ~ article form fieldset:nth-child(2) li:nth-child(3) label {
+    background-image: linear-gradient(to top, #151515 0%, #1d1d1d 100%);
+    box-shadow: inset 0 16px 14px -21px transparent, 
+    0 0px 13px 0 rgb(0 0 0 / 30%), inset 0 0 7px 2px rgb(0 0 0 / 40%);
+}
+
+fieldset:nth-child(2) label:active div,
+input[id=size1]:checked ~ article form fieldset:nth-child(2) li:nth-child(1) div,
+input[id=size2]:checked ~ article form fieldset:nth-child(2) li:nth-child(2) div,
+input[id=size3]:checked ~ article form fieldset:nth-child(2) li:nth-child(3) div{
+    transform: scale(.89);
+    transition: all .2s;
+}
+
+
+
+
+
+
 
 
 input, input:active {
     cursor: pointer;
 }
 
-input[type="text"], input[type="button"], input[type="checkbox"] {
+input[type="text"], input[type="button"], input[type="checkbox"], input[type="radio"] {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -431,10 +510,7 @@ input[type="text"][value$="l"] ~ article div:nth-of-type(2) li:nth-child(9) labe
 }
 
 
-input[type="range"] {
-    margin-top: 6em;
-    transform: rotate(-90deg);
-}
+
 
 form:has(input[type="range"][value="10"]) ~  div li {
     animation-duration: .22s;
