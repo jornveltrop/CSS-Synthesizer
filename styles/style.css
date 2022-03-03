@@ -19,16 +19,20 @@
     box-sizing: border-box;
 }
 
-svg {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-}
-
 html, body {
     height: 100%;
     width: 100%;
     font-family: sans-serif;
+}
+
+input, input:active {
+    cursor: pointer;
+}
+
+svg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
 }
 
 li {
@@ -44,6 +48,24 @@ h2 {
     text-shadow: -1px  -1px 0px #0a0a0a;
 }
 
+/* Remove inputs */
+input[type="text"], input[type="button"], input[type="checkbox"], input[type="radio"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/********************/
+/* SYNTH STIJLEN */
+/********************/
+
+/* SYNTH BOX */
 article {
     display: block;
     position: absolute;
@@ -58,33 +80,14 @@ article {
     background-color: #734121;
     background-image: linear-gradient( 135deg, #85582f, #a5784e, #bb8e64 );
     box-shadow: 
-    2px 0 1.5px -1.5px #41291a inset, 
-    3.5px 0 2.5px -2.5px #5c3e23 inset, 
-    4.5px 0 2.5px -2.5px #5f4125 inset, 
-    5.5px 0 2.5px -2.5px #6d4a29 inset, 
-    6.5px 0 2.5px -2.5px #85582f inset, 
-    -3px 0 2px -2px #efd6b7 inset, 
-    -3.5px 0 2px -2px #d1b190 inset, 
-    -4.5px 0 2px -2px #e6bb84 inset, 
-    -5.5px 0 2px -2px #e1a775 inset, 
-    0 2px 2px -2px #e3cab0 inset, 
-    0 4px 2px -2px #e0bba6 inset, 
-    0 5px 2px -2px #9f7f5d inset, 
-    0 -2px 1.5px -1.5px #ddb599 inset, 
-    0 -4.5px 1.5px -1.5px #f6d0a8 inset, 
-    0 -5px 1.5px -1.5px #fff2db inset, 
-    -30px -30px 10px rgb(114 96 86 / 5%), 
-    -25px -25px 10px rgb(114 101 86 / 10%), 
-    -20px -20px 10px rgb(114 99 86 / 8%), 
-    -10px -10px 10px rgb(114 99 86 / 10%), 
-    -5px -5px 10px rgb(114 103 86 / 13%), 
-    -40px -60px 30px rgb(114 100 86 / 25%), 
-    -2px 0 5px rgb(142 131 124 / 50%), 
-    0 0 10px rgb(142 133 124 / 10%), 
-    0 0 20px rgb(142 132 124 / 5%), 
-    0 0 50px rgb(255 251 245 / 50%);
+        2px 0 1.5px -1.5px #41291a inset, 3.5px 0 2.5px -2.5px #5c3e23 inset, 4.5px 0 2.5px -2.5px #5f4125 inset, 5.5px 0 2.5px -2.5px #6d4a29 inset, 6.5px 0 2.5px -2.5px #85582f inset, 
+        -3px 0 2px -2px #efd6b7 inset, -3.5px 0 2px -2px #d1b190 inset, -4.5px 0 2px -2px #e6bb84 inset, -5.5px 0 2px -2px #e1a775 inset, 
+        0 2px 2px -2px #e3cab0 inset, 0 4px 2px -2px #e0bba6 inset, 0 5px 2px -2px #9f7f5d inset, 0 -2px 1.5px -1.5px #ddb599 inset, 0 -4.5px 1.5px -1.5px #f6d0a8 inset, 0 -5px 1.5px -1.5px #fff2db inset, 
+        -30px -30px 10px rgb(114 96 86 / 5%), -25px -25px 10px rgb(114 101 86 / 10%), -20px -20px 10px rgb(114 99 86 / 8%), -10px -10px 10px rgb(114 99 86 / 10%), -5px -5px 10px rgb(114 103 86 / 13%), -40px -60px 30px rgb(114 100 86 / 25%), -2px 0 5px rgb(142 131 124 / 50%), 
+        0 0 10px rgb(142 133 124 / 10%), 0 0 20px rgb(142 132 124 / 5%), 0 0 50px rgb(255 251 245 / 50%);
 }
 
+/* Wood border layer */
 article img {
     display: block;
     position: absolute;
@@ -102,27 +105,27 @@ article img {
     border-radius: 6px;
 }
 
+/* Metal plate in Synth */
 section {
     display: flex;
     flex-wrap: wrap;
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
     margin: 3em;
     background-color: #303030;
     background: linear-gradient( #303030,#252525);
     border-radius: 1px;
     height: calc(100% - 6em);
     width: calc(100% - 6em);
-    /* box-shadow:  0 -2px 2px -2px #000000 inset, 0px 0 1.25px 1px #a16c42 inset, 0 0 1px 1.5px rgb(0 0 0 / 50%) inset, 0 0 2.5px 3px rgb(0 0 0 / 20%) inset, 0 0 4px 5px rgb(82 58 56 / 10%) inset, -1px 0 1px #915943f2, 0 0 5px 3px #8b5e3a; */
 }
 
+/* Move content up from ::before BG*/
 section > div, section > form {
     z-index: 1;
 }
 
+/* Background Metal plate */
 section::before {
     content: "";
     position: absolute;
@@ -130,7 +133,7 @@ section::before {
     height: 100%;
     top: 0;
     background-color: red;
-    filter: url("#metalTexture");
+    /* filter: url("#metalTexture"); */
     opacity: .7;
     background-color: #303030;
     background: linear-gradient( #303030,#252525);
@@ -138,12 +141,11 @@ section::before {
     box-shadow:  0 -2px 2px -2px #000000 inset, 0px 0 1.25px 1px #a16c42 inset, 0 0 1px 1.5px rgb(0 0 0 / 50%) inset, 0 0 2.5px 3px rgb(0 0 0 / 20%) inset, 0 0 4px 5px rgb(82 58 56 / 10%) inset, -1px 0 1px #915943f2, 0 0 5px 3px #8b5e3a;
 }
 
-form:first-of-type {
-    width: calc(50% - 4em);
-    height: calc(50% - 4em);
-    padding: 2em;
-}
+/********************/
+/*      DISPLAY     */
+/********************/
 
+/* Display container */
 section > div:nth-of-type(1) {
     height: 50%;
     width: 50%;
@@ -152,7 +154,8 @@ section > div:nth-of-type(1) {
     align-items: center;
 }
 
-div:nth-of-type(1) ul {
+/* Display */
+section > div:nth-of-type(1) ul {
     list-style-type: none;
     background: black;
     height: 10em;
@@ -171,7 +174,8 @@ div:nth-of-type(1) ul {
     -1px 0 1px #292929, 0 0 5px 3px #252525;
 }
 
-div:nth-of-type(1) li {
+/* Display dots */
+section > div:nth-of-type(1) li {
     transform-origin: 50% 50%;
 	height: 6px;
 	width: 6px;
@@ -185,8 +189,7 @@ div:nth-of-type(1) li {
     box-shadow: 0px 0px 10px 2px #941414;
 }
 
-
-
+/* Animation dots */
 @keyframes vertical-movement {
 	0%,
 	100% {
@@ -197,12 +200,23 @@ div:nth-of-type(1) li {
 	}
 }
 
-div:nth-of-type(1) ul input {
-    position: absolute;
-    top: 0;
-    visibility: hidden;
+
+/*********************/
+/*   Control panel   */
+/*********************/
+
+/* Control panel container */
+form {
+    width: 50%;
+    height: 50%;
+    padding: 2em;
 }
 
+
+/*   Power & play buttons   */
+/****************************/
+
+/* Button container */
 fieldset:nth-child(1) {
     position: relative;
     display: flex;
@@ -211,11 +225,11 @@ fieldset:nth-child(1) {
     padding: 1px;
     width: fit-content;
     border: none;
-    min-inline-size: none;
     color: #fff;
     margin-bottom: 1em;
 }
 
+/* Buttons */
 fieldset label {
     background-color: grey;
     width: auto;
@@ -233,33 +247,33 @@ fieldset label {
     color: #fff;
 }
 
-fieldset:first-of-type label:nth-child(1),
-fieldset:first-of-type label:nth-child(2) {
-    display: flex;
-}
-
+/* Power button content */
 fieldset:first-of-type label:nth-child(1)::before {
     content: "power_settings_new";
     color: grey;
 }
 
+/* Power button - CHECKED */
 input[id=on-off]:checked ~ article form fieldset:first-of-type label:nth-child(1)::before {
     content: "power_settings_new";
     color: #fff;
     text-shadow: 0px 0px 5px #fff;
 }
 
+/* Play button content */
 fieldset:first-of-type label:nth-child(2)::before {
     content: "play_arrow";
     color: grey;
 }
 
+/* Play button content - CHECKED */
 input[id=play-pause]:checked ~ article form fieldset:first-of-type label:nth-child(2)::before {
     content: "pause";
     color: #fff;
     text-shadow: 0px 0px 5px #fff;
 }
 
+/* Buttons style - CHECKED */
 input[id=on-off]:checked ~ article form fieldset:first-of-type label:nth-child(1),
 input[id=play-pause]:checked ~ article form fieldset:first-of-type label:nth-child(2) {
     background-image: linear-gradient(to top, #151515 0%, #1d1d1d 100%);
@@ -267,50 +281,59 @@ input[id=play-pause]:checked ~ article form fieldset:first-of-type label:nth-chi
     0 0px 13px 0 rgb(0 0 0 / 30%), inset 0 0 7px 2px rgb(0 0 0 / 40%);
 }
 
+/* Buttons content style - CHECKED */
 input[id=on-off]:checked ~ article form fieldset:first-of-type label:nth-child(1)::before,
 input[id=play-pause]:checked ~ article form fieldset:first-of-type label:nth-child(2)::before {
     transform: scale(.89);
     transition: all .2s;
 }
 
+/* Power on > display visible */
 input[id=on-off]:checked ~ article div:nth-of-type(1) li {
     opacity: 1;
 }
 
+/* Play > animation start */
 input[id=play-pause]:checked ~ article div:nth-of-type(1) li {
     animation-play-state: running;
     animation-delay: var(--index);
 }
 
 
+/*   Size radio buttons   */
+/**************************/
 
-
-/* SIZE */
+/* Size radio 1 > Change dot size  */
 input[id=size1]:checked ~ article div:nth-of-type(1) li {
     height: 6px;
     width: 6px;
 }
 
+/* Size radio 2 > Change dot size  */
 input[id=size2]:checked ~ article div:nth-of-type(1) li{
     height: 10px;
     width: 10px;
 }
 
+/* Size radio 3 > Change dot size  */
 input[id=size3]:checked ~ article div:nth-of-type(1) li {
     height: 18px;
     width: 18px;
 }
 
+/* Size container  */
 fieldset:nth-child(2) {
     border: none;
     margin-bottom: 1em;
 }
 
+/* Size row  */
 fieldset:nth-child(2) ul {
     display: flex;
     gap: .2em;
 }
 
+/* Size button container  */
 fieldset:nth-child(2) li {
     position: relative;
     display: flex;
@@ -319,10 +342,10 @@ fieldset:nth-child(2) li {
     padding: 1px;
     width: fit-content;
     border: none;
-    min-inline-size: none;
     color: #fff;
 }
 
+/* Size button  */
 fieldset:nth-child(2) label {
     height: 2em;
     width: 2em;
@@ -330,7 +353,7 @@ fieldset:nth-child(2) label {
     padding: 0;
 }
 
-
+/* Size button dot */
 fieldset:nth-child(2) li div {
     background-color: grey;
     height: 4px;
@@ -338,16 +361,19 @@ fieldset:nth-child(2) li div {
     border-radius: 100%;
 }
 
+/* Size button dot 2 */
 fieldset:nth-child(2) li:nth-child(2) div {
     height: 8px;
     width: 8px;
 }
 
+/* Size button dot 3 */
 fieldset:nth-child(2) li:nth-child(3) div {
     height: 12px;
     width: 12px;
 }
 
+/* Size button - CHECKED */
 input[id=size1]:checked ~ article form fieldset:nth-child(2) li:nth-child(1) label,
 input[id=size2]:checked ~ article form fieldset:nth-child(2) li:nth-child(2) label,
 input[id=size3]:checked ~ article form fieldset:nth-child(2) li:nth-child(3) label {
@@ -356,6 +382,7 @@ input[id=size3]:checked ~ article form fieldset:nth-child(2) li:nth-child(3) lab
     0 0px 13px 0 rgb(0 0 0 / 30%), inset 0 0 7px 2px rgb(0 0 0 / 40%);
 }
 
+/* Size button dot - CHECKED */
 input[id=size1]:checked ~ article form fieldset:nth-child(2) li:nth-child(1) div,
 input[id=size2]:checked ~ article form fieldset:nth-child(2) li:nth-child(2) div,
 input[id=size3]:checked ~ article form fieldset:nth-child(2) li:nth-child(3) div{
@@ -366,35 +393,137 @@ input[id=size3]:checked ~ article form fieldset:nth-child(2) li:nth-child(3) div
 }
 
 
+/*    Slider (met HAS)    */
+/**************************/
+
+form:has(input[type="range"][value="10"]) ~  div li {
+    animation-duration: .22s;
+}
+
+form:has(input[type="range"][value="9"]) ~  div li {
+    animation-duration: .33s;
+}
+
+form:has(input[type="range"][value="8"]) ~  div li {
+    animation-duration: .42s;
+}
+
+form:has(input[type="range"][value="7"]) ~  div li {
+    animation-duration: .6s;
+}
+
+form:has(input[type="range"][value="6"]) ~  div li {
+    animation-duration: 1.3s;
+}
+
+form:has(input[type="range"][value="5"]) ~  div li {
+    animation-duration: 1.6s;
+}
+
+form:has(input[type="range"][value="4"]) ~  div li {
+    animation-duration: 2s;
+}
+
+form:has(input[type="range"][value="3"]) ~  div li {
+    animation-duration: 3s;
+}
+
+form:has(input[type="range"][value="2"]) ~  div li {
+    animation-duration: 4s;
+}
+
+form:has(input[type="range"][value="1"]) ~  div li {
+    animation-duration: 7s;
+}
+
+form:has(input[type="range"][value="0"]) ~  div li {
+    animation-duration: 10s;
+}
+
+
+/*********************/
+/*       Piano       */
+/*********************/
+
+/* Piano container */
+div:nth-of-type(2) {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Keyboard button */
+label[for="keys"] {
+    width: 12em;
+    color: #fff;
+}
+
+/* Keyboard button content */
+article div:nth-of-type(2) label[for="keys"]::before {
+    content: "Play with keyboard";
+}
+
+/* Keyboard button - FOCUS */
+input[type="text"]:focus ~ article div:nth-of-type(2) label[for="keys"] {
+    background-image: linear-gradient(to top, #151515 0%, #1d1d1d 100%);
+    box-shadow: inset 0 16px 14px -21px transparent, 
+    0 0px 13px 0 rgb(0 0 0 / 30%), inset 0 0 7px 2px rgb(0 0 0 / 40%);
+
+}
+
+/* Keyboard button - FOCUS */
+input[type="text"]:focus ~ article div:nth-of-type(2) label[for="keys"]::before {
+    content: "Playing with keyboard";
+    transform: scale(.89);
+    transition: all .2s;
+    color: #fff;
+}
 
 
 
 
+/* Piano tiles list */
+div:nth-of-type(2) ul {
+    display: flex;
+    padding: 1em;
+}
 
-
-input, input:active {
+/* Piano tile */
+div:nth-of-type(2) label {
+    position: relative;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0.5rem 0;
+    user-select: none;
     cursor: pointer;
 }
 
-input[type="text"], input[type="button"], input[type="checkbox"], input[type="radio"] {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap; /* added line */
-    border: 0;
+/* Piano white tile */
+div:nth-of-type(2) li:nth-child(odd) label {
+    height: 12.5rem;
+    width: 3.5rem;
+    z-index: 1;
+    border-left: 1px solid hsl(0, 0%, 73%);
+    border-bottom: 1px solid hsl(0, 0%, 73%);
+    border-radius: 0 0 5px 5px;
+    box-shadow: -1px 0 0 var(--white-80) inset, 0 0 5px hsl(0, 0%, 80%) inset,
+      0 0 3px var(--black-20);
+    background: linear-gradient(to bottom, hsl(0, 0%, 93%) 0%, white 100%);
+    color: var(--black-30);
+    margin: 0 0 0 -1rem;
+    border-top: 1px solid hsl(0, 0%, 0%);
+    border-left: 1px solid hsl(0, 0%, 0%);
+    border-bottom: 1px solid hsl(0, 0%, 0%);
 }
 
-input[type="text"][value$="a"] ~ article div:nth-of-type(1) li,
-input[id="piano1"]:active ~ article div:nth-of-type(1) ul li  {
-    background-color: yellow;
-    box-shadow: 0px 0px 10px 2px yellow;
-}
-
-input[type="text"][value$="a"] ~ article div:nth-of-type(2) li:nth-child(1) label {
+/* Piano white tile - ACTIVE */
+div:nth-of-type(2) li:nth-child(odd) label:active {
     border-top: 1px solid hsl(0, 0%, 47%);
     border-left: 1px solid hsl(0, 0%, 60%);
     border-bottom: 1px solid hsl(0, 0%, 60%);
@@ -404,13 +533,22 @@ input[type="text"][value$="a"] ~ article div:nth-of-type(2) li:nth-child(1) labe
     outline: none;
 }
 
-input[type="text"][value$="s"] ~ article div:nth-of-type(1) li,
-input[id="piano2"]:active ~ article div:nth-of-type(1) ul li {
-    background-color: blue;
-    box-shadow: 0px 0px 10px 2px blue;
+/* Piano black tile */
+div:nth-of-type(2) li:nth-child(even) label {
+    height: 8rem;
+    width: 2rem;
+    margin: 0 0 0 -1rem;
+    z-index: 2;
+    border: 1px solid black;
+    border-radius: 0 0 3px 3px;
+    box-shadow: -1px -1px 2px var(--white-20) inset,
+      0 -5px 2px 3px var(--black-60) inset, 0 2px 4px var(--black-50);
+    background: linear-gradient(45deg, hsl(0, 0%, 13%) 0%, hsl(0, 0%, 33%) 100%);
+    color: var(--white-50);
 }
 
-input[type="text"][value$="s"] ~ article div:nth-of-type(2) li:nth-child(2) label {
+/* Piano black tile - ACTIVE */
+div:nth-of-type(2) li:nth-child(even) label:active {
     box-shadow: -1px -1px 2px var(--white-20) inset,
       0 -2px 2px 3px var(--black-60) inset, 0 1px 2px var(--black-50);
     background: linear-gradient(
@@ -421,13 +559,17 @@ input[type="text"][value$="s"] ~ article div:nth-of-type(2) li:nth-child(2) labe
     outline: none;
 }
 
+
+/*    Input Piano keys    */
+/**************************/
+
 input[type="text"][value$="d"] ~ article div:nth-of-type(1) li,
-input[id="piano3"]:active ~ article div:nth-of-type(1) ul li {
-    background-color: rgb(255, 123, 0);
-    box-shadow: 0px 0px 10px 2px rgb(255, 123, 0);
+input[id="piano1"]:active ~ article div:nth-of-type(1) ul li  {
+    background-color: yellow;
+    box-shadow: 0px 0px 10px 2px yellow;
 }
 
-input[type="text"][value$="d"] ~ article div:nth-of-type(2) li:nth-child(3) label {
+input[type="text"][value$="d"] ~ article div:nth-of-type(2) li:nth-child(1) label {
     border-top: 1px solid hsl(0, 0%, 47%);
     border-left: 1px solid hsl(0, 0%, 60%);
     border-bottom: 1px solid hsl(0, 0%, 60%);
@@ -437,13 +579,46 @@ input[type="text"][value$="d"] ~ article div:nth-of-type(2) li:nth-child(3) labe
     outline: none;
 }
 
+input[type="text"][value$="r"] ~ article div:nth-of-type(1) li,
+input[id="piano2"]:active ~ article div:nth-of-type(1) ul li {
+    background-color: blue;
+    box-shadow: 0px 0px 10px 2px blue;
+}
+
+input[type="text"][value$="r"] ~ article div:nth-of-type(2) li:nth-child(2) label {
+    box-shadow: -1px -1px 2px var(--white-20) inset,
+      0 -2px 2px 3px var(--black-60) inset, 0 1px 2px var(--black-50);
+    background: linear-gradient(
+      to right,
+      hsl(0, 0%, 27%) 0%,
+      hsl(0, 0%, 13%) 100%
+    );
+    outline: none;
+}
+
 input[type="text"][value$="f"] ~ article div:nth-of-type(1) li,
+input[id="piano3"]:active ~ article div:nth-of-type(1) ul li {
+    background-color: rgb(255, 123, 0);
+    box-shadow: 0px 0px 10px 2px rgb(255, 123, 0);
+}
+
+input[type="text"][value$="f"] ~ article div:nth-of-type(2) li:nth-child(3) label {
+    border-top: 1px solid hsl(0, 0%, 47%);
+    border-left: 1px solid hsl(0, 0%, 60%);
+    border-bottom: 1px solid hsl(0, 0%, 60%);
+    box-shadow: 2px 0 3px var(--black-10) inset,
+      -5px 5px 20px var(--black-20) inset, 0 0 3px var(--black-20);
+    background: linear-gradient(to bottom, white 0%, hsl(0, 0%, 91%) 100%);
+    outline: none;
+}
+
+input[type="text"][value$="t"] ~ article div:nth-of-type(1) li,
 input[id="piano4"]:active ~ article div:nth-of-type(1) ul li {
     background-color: rgb(0, 255, 64);
     box-shadow: 0px 0px 10px 2px rgb(0, 255, 64);
 }
 
-input[type="text"][value$="f"] ~ article div:nth-of-type(2) li:nth-child(4) label {
+input[type="text"][value$="t"] ~ article div:nth-of-type(2) li:nth-child(4) label {
     box-shadow: -1px -1px 2px var(--white-20) inset,
       0 -2px 2px 3px var(--black-60) inset, 0 1px 2px var(--black-50);
     background: linear-gradient(
@@ -470,13 +645,46 @@ input[type="text"][value$="g"] ~ article div:nth-of-type(2) li:nth-child(5) labe
     outline: none;
 }
 
-input[type="text"][value$="h"] ~ article div:nth-of-type(1) li,
+input[type="text"][value$="y"] ~ article div:nth-of-type(1) li,
 input[id="piano6"]:active ~ article div:nth-of-type(1) ul li {
     background-color: rgb(255, 0, 119);
     box-shadow: 0px 0px 10px 2px rgb(255, 0, 119);
 }
 
-input[type="text"][value$="h"] ~ article div:nth-of-type(2) li:nth-child(6) label {
+input[type="text"][value$="y"] ~ article div:nth-of-type(2) li:nth-child(6) label {
+    box-shadow: -1px -1px 2px var(--white-20) inset,
+      0 -2px 2px 3px var(--black-60) inset, 0 1px 2px var(--black-50);
+    background: linear-gradient(
+      to right,
+      hsl(0, 0%, 27%) 0%,
+      hsl(0, 0%, 13%) 100%
+    );
+    outline: none;
+}
+
+input[type="text"][value$="h"] ~ article div:nth-of-type(1) li,
+input[id="piano7"]:active ~ article div:nth-of-type(1) ul li {
+    background-color: rgb(0, 238, 255);
+    box-shadow: 0px 0px 10px 2px rgb(0, 238, 255);
+}
+
+input[type="text"][value$="h"] ~ article div:nth-of-type(2) li:nth-child(7) label {
+    border-top: 1px solid hsl(0, 0%, 47%);
+    border-left: 1px solid hsl(0, 0%, 60%);
+    border-bottom: 1px solid hsl(0, 0%, 60%);
+    box-shadow: 2px 0 3px var(--black-10) inset,
+      -5px 5px 20px var(--black-20) inset, 0 0 3px var(--black-20);
+    background: linear-gradient(to bottom, white 0%, hsl(0, 0%, 91%) 100%);
+    outline: none;
+}
+
+input[type="text"][value$="u"] ~ article div:nth-of-type(1) li,
+input[id="piano8"]:active ~ article div:nth-of-type(1) ul li {
+    background-color: rgb(33, 134, 95);
+    box-shadow: 0px 0px 10px 2px rgb(33, 134, 95);
+}
+
+input[type="text"][value$="u"] ~ article div:nth-of-type(2) li:nth-child(8) label {
     box-shadow: -1px -1px 2px var(--white-20) inset,
       0 -2px 2px 3px var(--black-60) inset, 0 1px 2px var(--black-50);
     background: linear-gradient(
@@ -488,45 +696,12 @@ input[type="text"][value$="h"] ~ article div:nth-of-type(2) li:nth-child(6) labe
 }
 
 input[type="text"][value$="j"] ~ article div:nth-of-type(1) li,
-input[id="piano7"]:active ~ article div:nth-of-type(1) ul li {
-    background-color: rgb(0, 238, 255);
-    box-shadow: 0px 0px 10px 2px rgb(0, 238, 255);
-}
-
-input[type="text"][value$="j"] ~ article div:nth-of-type(2) li:nth-child(7) label {
-    border-top: 1px solid hsl(0, 0%, 47%);
-    border-left: 1px solid hsl(0, 0%, 60%);
-    border-bottom: 1px solid hsl(0, 0%, 60%);
-    box-shadow: 2px 0 3px var(--black-10) inset,
-      -5px 5px 20px var(--black-20) inset, 0 0 3px var(--black-20);
-    background: linear-gradient(to bottom, white 0%, hsl(0, 0%, 91%) 100%);
-    outline: none;
-}
-
-input[type="text"][value$="k"] ~ article div:nth-of-type(1) li,
-input[id="piano8"]:active ~ article div:nth-of-type(1) ul li {
-    background-color: rgb(33, 134, 95);
-    box-shadow: 0px 0px 10px 2px rgb(33, 134, 95);
-}
-
-input[type="text"][value$="k"] ~ article div:nth-of-type(2) li:nth-child(8) label {
-    box-shadow: -1px -1px 2px var(--white-20) inset,
-      0 -2px 2px 3px var(--black-60) inset, 0 1px 2px var(--black-50);
-    background: linear-gradient(
-      to right,
-      hsl(0, 0%, 27%) 0%,
-      hsl(0, 0%, 13%) 100%
-    );
-    outline: none;
-}
-
-input[type="text"][value$="l"] ~ article div:nth-of-type(1) li,
 input[id="piano9"]:active ~ article div:nth-of-type(1) ul li {
     background-color: rgb(85, 44, 44);
     box-shadow: 0px 0px 10px 2px rgb(85, 44, 44);
 }
 
-input[type="text"][value$="l"] ~ article div:nth-of-type(2) li:nth-child(9) label {
+input[type="text"][value$="j"] ~ article div:nth-of-type(2) li:nth-child(9) label {
     border-top: 1px solid hsl(0, 0%, 47%);
     border-left: 1px solid hsl(0, 0%, 60%);
     border-bottom: 1px solid hsl(0, 0%, 60%);
@@ -535,157 +710,3 @@ input[type="text"][value$="l"] ~ article div:nth-of-type(2) li:nth-child(9) labe
     background: linear-gradient(to bottom, white 0%, hsl(0, 0%, 91%) 100%);
     outline: none;
 }
-
-
-
-
-form:has(input[type="range"][value="10"]) ~  div li {
-    animation-duration: .22s;
-}
-
-form:has(input[type="range"][value="9"]) ~  div li {
-    animation-duration: .33s;
-}
-
-form:has(input[type="range"][value="8"]) ~  div li {
-    animation-duration: .42s;
-}
-
-form:has(input[type="range"][value="7"]) ~  div li {
-    animation-duration: .6s;
-}
-
-form:has(input[type="range"][value="6"]) ~  div li {
-    animation-duration: 1.3s;
-}
-
-form:has(input[type="range"][value="5"]) ~  div li {
-    animation-duration: 1.8s;
-}
-
-form:has(input[type="range"][value="4"]) ~  div li {
-    animation-duration: 2s;
-}
-
-form:has(input[type="range"][value="3"]) ~  div li {
-    animation-duration: 4s;
-}
-
-form:has(input[type="range"][value="2"]) ~  div li {
-    animation-duration: 5s;
-}
-
-form:has(input[type="range"][value="1"]) ~  div li {
-    animation-duration: 7s;
-}
-
-form:has(input[type="range"][value="0"]) ~  div li {
-    animation-duration: 10s;
-}
-
-
-
-
-div:nth-of-type(2) {
-    width: 100%;
-    height: 50%;
-    /* background: yellow; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-div:nth-of-type(2) ul {
-    /* background-color: red; */
-    display: flex;
-    padding: 1em;
-}
-
-div:nth-of-type(2) label {
-    position: relative;
-    float: left;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    padding: 0.5rem 0;
-    user-select: none;
-    cursor: pointer;
-}
-
-div:nth-of-type(2) li:nth-child(odd) label {
-    height: 12.5rem;
-    width: 3.5rem;
-    z-index: 1;
-    border-left: 1px solid hsl(0, 0%, 73%);
-    border-bottom: 1px solid hsl(0, 0%, 73%);
-    border-radius: 0 0 5px 5px;
-    box-shadow: -1px 0 0 var(--white-80) inset, 0 0 5px hsl(0, 0%, 80%) inset,
-      0 0 3px var(--black-20);
-    background: linear-gradient(to bottom, hsl(0, 0%, 93%) 0%, white 100%);
-    color: var(--black-30);
-    margin: 0 0 0 -1rem;
-    border-top: 1px solid hsl(0, 0%, 0%);
-    border-left: 1px solid hsl(0, 0%, 0%);
-    border-bottom: 1px solid hsl(0, 0%, 0%);
-}
-
-div:nth-of-type(2) li:nth-child(odd) label:active {
-    border-top: 1px solid hsl(0, 0%, 47%);
-    border-left: 1px solid hsl(0, 0%, 60%);
-    border-bottom: 1px solid hsl(0, 0%, 60%);
-    box-shadow: 2px 0 3px var(--black-10) inset,
-      -5px 5px 20px var(--black-20) inset, 0 0 3px var(--black-20);
-    background: linear-gradient(to bottom, white 0%, hsl(0, 0%, 91%) 100%);
-    outline: none;
-  }
-
-div:nth-of-type(2) li:nth-child(even) label{
-    height: 8rem;
-    width: 2rem;
-    margin: 0 0 0 -1rem;
-    z-index: 2;
-    border: 1px solid black;
-    border-radius: 0 0 3px 3px;
-    box-shadow: -1px -1px 2px var(--white-20) inset,
-      0 -5px 2px 3px var(--black-60) inset, 0 2px 4px var(--black-50);
-    background: linear-gradient(45deg, hsl(0, 0%, 13%) 0%, hsl(0, 0%, 33%) 100%);
-    color: var(--white-50);
-}
-
-div:nth-of-type(2) li:nth-child(even) label:active {
-    box-shadow: -1px -1px 2px var(--white-20) inset,
-      0 -2px 2px 3px var(--black-60) inset, 0 1px 2px var(--black-50);
-    background: linear-gradient(
-      to right,
-      hsl(0, 0%, 27%) 0%,
-      hsl(0, 0%, 13%) 100%
-    );
-    outline: none;
-}
-
-
-/* PLAY WITH KEYBOARD LABEL */
-
-label[for="keys"] {
-    width: 12em;
-    color: #fff;
-}
-
-article div:nth-of-type(2) label[for="keys"]::before {
-    content: "Play with keyboard";
-}
-
-input[type="text"]:focus ~ article div:nth-of-type(2) label[for="keys"] {
-    background-image: linear-gradient(to top, #151515 0%, #1d1d1d 100%);
-    box-shadow: inset 0 16px 14px -21px transparent, 
-    0 0px 13px 0 rgb(0 0 0 / 30%), inset 0 0 7px 2px rgb(0 0 0 / 40%);
-
-}
-
-input[type="text"]:focus ~ article div:nth-of-type(2) label[for="keys"]::before {
-    transform: scale(.89);
-    transition: all .2s;
-    color: #fff;
-}
-
