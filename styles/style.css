@@ -133,7 +133,7 @@ section::before {
     height: 100%;
     top: 0;
     background-color: red;
-    /* filter: url("#metalTexture"); */
+    filter: url("#metalTexture");
     opacity: .7;
     background-color: #303030;
     background: linear-gradient( #303030,#252525);
