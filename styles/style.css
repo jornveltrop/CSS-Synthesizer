@@ -39,6 +39,17 @@ li {
     list-style-type: none;
 }
 
+h1 {
+    margin: .5em;
+    color: grey;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin-bottom: .3em;
+    font-weight: 200;
+    text-shadow: -1px  -1px 0px #0a0a0a;
+    font-family: 'Audiowide', cursive;
+}
+
 h2 {
     color: grey;
     text-transform: uppercase;
@@ -67,7 +78,7 @@ input[type="text"], input[type="button"], input[type="checkbox"], input[type="ra
 
 /* SYNTH BOX */
 article {
-    display: block;
+    display: flex;
     position: absolute;
     top: 120px;
     top: calc(50vh - 300px);
@@ -132,7 +143,7 @@ section::before {
     width: 100%;
     height: 100%;
     top: 0;
-    background-color: red;
+    /* background-color: red; */
     filter: url("#metalTexture");
     opacity: .7;
     background-color: #303030;
@@ -152,6 +163,8 @@ section > div:nth-of-type(1) {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    /* background-color: yellow; */
 }
 
 /* Display */
@@ -210,6 +223,7 @@ form {
     width: 50%;
     height: 50%;
     padding: 2em;
+    /* background-color: red; */
 }
 
 
@@ -453,6 +467,7 @@ div:nth-of-type(2) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* background-color: green; */
 }
 
 
@@ -709,4 +724,50 @@ input[type="text"][value$="j"] ~ article div:nth-of-type(2) li:nth-child(9) labe
       -5px 5px 20px var(--black-20) inset, 0 0 3px var(--black-20);
     background: linear-gradient(to bottom, white 0%, hsl(0, 0%, 91%) 100%);
     outline: none;
+}
+
+
+
+@media (min-aspect-ratio: 1/1) {
+    article {
+     
+    }
+}
+
+@media (max-aspect-ratio: 1/1) {
+    article {
+        width: 100%;
+        max-width: 670px;
+        height: 700px;
+    }
+
+    form {
+        /* background-color: purple; */
+        width: 100%;
+        height: 16%;
+        display: flex;
+        gap: 1.5em;
+        padding: 2em 2em 1em 2em;
+    }
+
+    form fieldset {
+        height: fit-content;
+    }
+
+    section {
+        justify-content: flex-start;
+    }
+
+    /*PAINO*/
+    section > div:nth-of-type(2) {
+        /* background-color: #000; */
+        height: 46%;
+    }
+
+    /*PAINO*/
+    section > div:nth-of-type(1) {
+        width: 100%;
+        /* background-color: orange; */
+        height: 33%;
+    }
 }
