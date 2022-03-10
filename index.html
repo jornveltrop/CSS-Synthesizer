@@ -6,62 +6,110 @@
 
     <title>Visual Synthesizer</title>
 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles/style.css">
 
 </head>
 <body>
     <main>
-        <section>
-            <div id="wave-container" class="wave-container">
-                <button></button>
-                <button></button>
-                <button></button>
-                <div class="dot" id="d1"></div>
-                <div class="dot" id="d2"></div>
-                <div class="dot" id="d3"></div>
-                <div class="dot" id="d4"></div>
-                <div class="dot" id="d5"></div>
-                <div class="dot" id="d6"></div>
-                <div class="dot" id="d7"></div>
-                <div class="dot" id="d8"></div>
-                <div class="dot" id="d9"></div>
-                <div class="dot" id="d10"></div>
-            </div>
-        </section>
+        <input type="checkbox" name="on-off" id="on-off">
+        <input type="checkbox" name="play-pause" id="play-pause">
 
-        <section>
-            <div id="wave-container" class="wave-container">
-                <input onkeyup="this.setAttribute('value', this.value);" value="" />
-                <input type="checkbox" id="grootte" name="grootte">
-                <div class="dot" id="d1"></div>
-                <div class="dot" id="d2"></div>
-                <div class="dot" id="d3"></div>
-                <div class="dot" id="d4"></div>
-                <div class="dot" id="d5"></div>
-                <div class="dot" id="d6"></div>
-                <div class="dot" id="d7"></div>
-                <div class="dot" id="d8"></div>
-                <div class="dot" id="d9"></div>
-                <div class="dot" id="d10"></div>
-            </div>
-        </section>
+        <input type="radio" name="size" id="size1">
+        <input type="radio" name="size" id="size2" checked>
+        <input type="radio" name="size" id="size3">
 
-        <section>
-            <div id="wave-container" class="wave-container">
-                <input type="checkbox" id="grootte" name="grootte">
-                <div class="dot" id="d1"></div>
-                <div class="dot" id="d2"></div>
-                <div class="dot" id="d3"></div>
-                <div class="dot" id="d4"></div>
-                <div class="dot" id="d5"></div>
-                <div class="dot" id="d6"></div>
-                <div class="dot" id="d7"></div>
-                <div class="dot" id="d8"></div>
-                <div class="dot" id="d9"></div>
-                <div class="dot" id="d10"></div>
-            </div>
-        </section>
+        <input type="text" onkeyup="this.setAttribute('value', this.value);" value="" id="keys" autocorrect="off" />
+
+        <input type="button" id="piano1"/>
+        <input type="button" id="piano2"/>
+        <input type="button" id="piano3"/>
+        <input type="button" id="piano4"/>
+        <input type="button" id="piano5"/>
+        <input type="button" id="piano6"/>
+        <input type="button" id="piano7"/>
+        <input type="button" id="piano8"/>
+        <input type="button" id="piano9"/>
+
+        <article>
+            <img src="img/woodTexture.jpeg">
+            <section>
+                <form>
+                    
+                    <fieldset>
+                        <label for="on-off" class="material-icons"></label>
+                        <label for="play-pause" class="material-icons"></label>
+                    </fieldset>
+                    
+
+                    <fieldset>
+                        <h2>Size</h2>
+                        <ul>
+                            <li><label for="size1"><div></div></label></li>
+                            <li><label for="size2"><div></div></label></li>
+                            <li><label for="size3"><div></div></label></li>
+                        </ul>
+                    </fieldset>
+                    <div>
+                        <h2>Speed</h2>
+                        <input id="test" type="range" oninput="this.setAttribute('value', this.value);" min="0" max="10" value="5" />
+                    </div>
+                </form>
+
+                <div>
+                    <h1>Visual Synth 3.1</h1>
+                    <ul>                      
+                        <li style="--index: -0.3s;"></li>
+                        <li style="--index: -0.6s;"></li>
+                        <li style="--index: -0.9s;"></li>
+                        <li style="--index: -1.2s;"></li>
+                        <li style="--index: -1.5s;"></li>
+                        <li style="--index: -1.8s;"></li>
+                        <li style="--index: -2.1s;"></li>
+                        <li style="--index: -2.4s;"></li>
+                        <li style="--index: -2.7s;"></li>
+                        <li style="--index: -3s;"></li>
+                    </ul>
+                </div>
+                
+
+                <div>
+                    <fieldset>
+                        <label for="keys"></label>
+                    </fieldset>
+                    <ul>
+                        <li><label for="piano1"></label></li>
+                        <li><label for="piano2"></label></li>
+                        <li><label for="piano3"></label></li>
+                        <li><label for="piano4"></label></li>
+                        <li><label for="piano5"></label></li>
+                        <li><label for="piano6"></label></li>
+                        <li><label for="piano7"></label></li>
+                        <li><label for="piano8"></label></li>
+                        <li><label for="piano9"></label></li>
+                    </ul>
+                </div>
+            </section>
+
+           
+            
+        </article>
     </main>
 
+    <svg>
+        <defs>
+            <filter id="metalTexture">
+                <feTurbulence type="fractalNoise" baseFrequency="0 0.912" numOctaves="10" seed="25" stitchTiles="stitch" x="0%" y="0%" width="100%" height="100%" result="turbulence"/>
+                <feColorMatrix type="saturate" values="0" x="0%" y="0%" width="100%" height="100%" in="turbulence" result="colormatrix"/>
+                <feBlend mode="multiply" x="0%" y="0%" width="100%" height="100%" in="SourceGraphic" in2="colormatrix" result="blend"/>
+                <feComposite in="blend" in2="SourceAlpha" operator="in" x="0%" y="0%" width="100%" height="100%" result="composite"/>
+            </filter>
+        </defs>
+    </svg>
+    
 </body>
 </html>
