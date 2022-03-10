@@ -20,9 +20,11 @@ Ik heb gekozen om een Visual Synthesizer te maken. Waar je normaal de sound beï
 ## Week 1
 ### Interactie testjes
 In de eerste week heb ik een snelle opzet gemaakt met meerdere varianten om de view met dots visueel te beïnvloeden. Hiervoor had ik een aantal verschillende inputs en manieren gebruikt. Zoals :active en een input veld waarin je kunt typen. Ook checkboxes heb ik gebruikt om wat eerste testjes te doen. Erg gaaf om te zien dat dit gewoon met CSS kan.
+
 <img src="./content/week1.png" width="50%">
 
 **Animatie**
+
 Voor de synthesizer gebruik ik een lijst met LI's om deze bolletjes uiteindelijk te animeren in een wave vorm. Deze krijgen een wave omdat de animatie met een delay per dot later begint.
 
 ### Has() 
@@ -81,11 +83,11 @@ Om de Synthesizer nog realistischer te laten lijken wilde ik een metal brushed t
 
 **SVG Filter HTML**
 
-<img src="./content/SVGFilter.png" >
+<img src="./content/svgFilter.png" >
 
 **SVG Filter CSS**
 
-<img src="./content/SVGFilterCSS.png" >
+<img src="./content/svgFilterCSS.png" >
 
 
 
