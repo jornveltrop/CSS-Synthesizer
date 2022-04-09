@@ -1,7 +1,7 @@
 # CSS to the Rescue - Jorn Veltrop
 
 
-## [Live demo](https://jornveltrop.github.io/css-to-the-rescue-2122/)
+## [Live demo](https://jornveltrop.github.io/CSS-Synthesizer/)
 
 ## Description
 Dit is mijn repository voor het vak CSS to the rescue in de minor CMDA Web design & development.In dit vak maken we een interactieve webpagina maken met alleen CSS & HTML. We mochten geen gebruik maken van JavaScript. 
