@@ -5,7 +5,7 @@
 Optimaal te bekijken in de [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/) browser. Deze bevat de nieuwe has() CSS selector die ik heb gebruikt in dit experimentele project.
 
 ## Description
-Dit is mijn repository voor het vak CSS to the rescue in de minor CMDA Web design & development.In dit vak maken we een interactieve webpagina maken met alleen CSS & HTML. We mochten geen gebruik maken van JavaScript. 
+Dit is mijn repository voor het vak CSS to the rescue in de minor CMDA Web design & development. In dit vak maken we een interactieve webpagina maken met alleen CSS & HTML. We mochten geen gebruik maken van JavaScript. 
 
 Ik heb gekozen om een Visual Synthesizer te maken. Waar je normaal de sound beïnvloedt, beïnvloed je nu de visuals.
 
